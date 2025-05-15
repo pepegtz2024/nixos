@@ -24,5 +24,6 @@ services.flatpak.packages = [
 "org.kde.kalk"
 "net.nokyan.Resources"
 "page.tesk.Refine"
+"io.github.giantpinkrobots.varia"
 ];
 }
