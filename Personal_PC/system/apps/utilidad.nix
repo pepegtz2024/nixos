@@ -23,5 +23,6 @@ services.flatpak.packages = [
 "org.kde.ark"
 "org.kde.kalk"
 "net.nokyan.Resources"
+"page.tesk.Refine"
 ];
 }
