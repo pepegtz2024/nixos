@@ -25,5 +25,6 @@ services.flatpak.packages = [
 "net.nokyan.Resources"
 "page.tesk.Refine"
 "io.github.giantpinkrobots.varia"
+"org.localsend.localsend_app"
 ];
 }
