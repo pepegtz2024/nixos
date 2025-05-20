@@ -22,6 +22,6 @@
 	./flatpak.nix
 	./podman.nix
 	./hardware-acceleration.nix
-
+	./clamav.nix
 	];
 }
