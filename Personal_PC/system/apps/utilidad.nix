@@ -5,13 +5,13 @@ podman-compose
 gearlever
 kopia-ui
 git
+clamtk
 ];
 services.flatpak.packages = [
 "app.zen_browser.zen"
 "io.github.dvlv.boxbuddyrs"
 "org.gnome.World.PikaBackup"
 "ca.littlesvr.asunder"
-"com.gitlab.davem.ClamTk"
 "com.vysp3r.ProtonPlus"
 "org.musicbrainz.Picard"
 "org.nickvision.tubeconverter"
