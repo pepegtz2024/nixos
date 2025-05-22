@@ -13,6 +13,7 @@
 		nixos-hardware = {
 		url = "github:NixOS/nixos-hardware/master";
 		};
+
 		};
 
 	outputs ={ self, nixpkgs, nix-flatpak, lanzaboote, nixos-hardware, ... }:
