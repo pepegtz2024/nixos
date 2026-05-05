@@ -2,11 +2,9 @@
 programs.steam.enable = true;
 hardware.steam-hardware.enable = true;
 environment.systemPackages = with pkgs; [
-prismlauncher
 discord
 adwaita-icon-theme
 mcpelauncher-ui-qt
-lutris
 protontricks
 heroic
 ];
@@ -26,5 +24,6 @@ services.flatpak.packages = [
 "info.cemu.Cemu"
 "io.github.ryubing.Ryujinx"
 "io.github.hedge_dev.hedgemodmanager"
+"com.moulberry.PandoraLauncher"
 ];
 }

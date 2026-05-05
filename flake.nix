@@ -2,7 +2,7 @@
 	description = "La configuracion del sistema";
 	inputs = {
 		nixpkgs = {
-			url = "github:nixos/nixpkgs/nixos-25.05";
+			url = "github:nixos/nixpkgs/nixos-25.11";
 		};
 
 		nix-flatpak = {
@@ -10,7 +10,7 @@
 		};
 
 		lanzaboote = {
-        url = "github:nix-community/lanzaboote/v0.4.2";
+        url = "github:nix-community/lanzaboote/v1.0.0";
         };
 
 		nixos-hardware = {
@@ -29,6 +29,7 @@
 			nix-flatpak.nixosModules.nix-flatpak
 			lanzaboote.nixosModules.lanzaboote
 			nixos-hardware.nixosModules.common-cpu-intel
+			nixos-hardware.nixosModules.common-pc-laptop
 			 ];
 		};
 	};
