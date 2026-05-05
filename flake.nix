@@ -2,7 +2,7 @@
 	description = "La configuracion del sistema";
 	inputs = {
 		nixpkgs = {
-			url = "github:nixos/nixpkgs/nixos-25.11";
+			url = "github:nixos/nixpkgs/nixos-unstable";
 		};
 
 		nix-flatpak = {

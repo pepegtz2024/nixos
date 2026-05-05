@@ -2,7 +2,7 @@
 let
 intelBusId = "PCI:0:2:0"; #Usar solo si la CPU es intel
 nvidiaBusId = "PCI:1:0:0";
-amdgpuBusId = ""; #Usar solo si la CPU es amd
+amdBusId = ""; #Usar solo si la CPU es amd
 in
 {
   services.xserver.videoDrivers = ["nvidia"];
