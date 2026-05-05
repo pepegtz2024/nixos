@@ -1,6 +1,6 @@
 {
 	imports = [
-	./nvidia.nix	
+	./nvidia.nix
 	./apps/productividad.nix
 	./apps/ocio.nix
 	./apps/utilidad.nix
@@ -14,7 +14,7 @@
 	./network-manager.nix
 	./cups.nix
 	./shell.nix
-	./gnome-extensions.nix
+	#./gnome-extensions.nix
 	./firewall.nix
 	./waydroid.nix
 	./lanzaboote.nix

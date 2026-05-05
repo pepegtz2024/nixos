@@ -8,47 +8,39 @@
     [ (modulesPath + "/installer/scan/not-detected.nix")
     ];
 
-  boot.initrd.availableKernelModules = [ "xhci_pci" "vmd" "nvme" "usb_storage" "sd_mod" "sdhci_pci" ];
+  boot.initrd.availableKernelModules = [ "xhci_pci" "vmd" "nvme" "uas" "sd_mod" "sdhci_pci" ];
   boot.initrd.kernelModules = [ ];
   boot.kernelModules = [ "kvm-intel" ];
   boot.extraModulePackages = [ ];
 
   fileSystems."/" =
-    { device = "/dev/disk/by-uuid/8f9dc60e-bffc-4565-81fc-bfb3f5458fc4";
+    { device = "/dev/mapper/luks-ad889244-70f2-4e51-86db-2b744ac9342c";
       fsType = "btrfs";
       options = [ "subvol=@" "compress-force=zstd" ];
     };
 
-  fileSystems."/home" =
-    { device = "/dev/disk/by-uuid/8f9dc60e-bffc-4565-81fc-bfb3f5458fc4";
-      fsType = "btrfs";
-      options = [ "subvol=@home" "compress-force=zstd" "nosuid" "nodev" "nofail" ];
-     };
+  boot.initrd.luks.devices."luks-ad889244-70f2-4e51-86db-2b744ac9342c".device = "/dev/disk/by-uuid/ad889244-70f2-4e51-86db-2b744ac9342c";
+  boot.initrd.luks.devices."luks-94279658-6528-49c0-8bfa-4a7aff566b66".device = "/dev/disk/by-uuid/94279658-6528-49c0-8bfa-4a7aff566b66";
 
-    fileSystems."/home/pepegtz2024/Games" =
-    { device = "/dev/mapper/luks-Games";
+  fileSystems."/home" =
+    { device = "/dev/mapper/luks-ad889244-70f2-4e51-86db-2b744ac9342c";
       fsType = "btrfs";
-      options = [ "compress-force=zstd" "nosuid" "nodev" "nofail" "x-gvfs-show" ];
+      options = [ "subvol=@home" "compress-force=zstd" ];
     };
 
-  boot.initrd.luks.devices."luks-a2f71833-0111-40b8-a05c-8680db789910".device = "/dev/disk/by-uuid/a2f71833-0111-40b8-a05c-8680db789910";
-  boot.initrd.luks.devices."luks-Games".device = "/dev/disk/by-uuid/395a4c27-740f-42b8-9c30-7f7a4a1b2787";
-
   fileSystems."/boot" =
-    { device = "/dev/disk/by-uuid/3805-2C6E";
+    { device = "/dev/disk/by-uuid/698D-F82C";
       fsType = "vfat";
       options = [ "fmask=0077" "dmask=0077" ];
     };
 
-  swapDevices = [ ];
+    fileSystems."/home/pepegtz2024/Games" =
+    { device = "/dev/mapper/luks-94279658-6528-49c0-8bfa-4a7aff566b66";
+      fsType = "btrfs";
+      options = [ "compress-force=zstd" "nofail" "nosuid" "nodev" ];
+    };
 
-  # Enables DHCP on each ethernet and wireless interface. In case of scripted networking
-  # (the default) this is the recommended approach. When using systemd-networkd it's
-  # still possible to use this option, but it's recommended to use it in conjunction
-  # with explicit per-interface declarations with `networking.interfaces.<interface>.useDHCP`.
-  networking.useDHCP = lib.mkDefault true;
-  # networking.interfaces.eno1.useDHCP = lib.mkDefault true;
-  # networking.interfaces.wlo1.useDHCP = lib.mkDefault true;
+  swapDevices = [ ];
 
   nixpkgs.hostPlatform = lib.mkDefault "x86_64-linux";
   hardware.cpu.intel.updateMicrocode = lib.mkDefault config.hardware.enableRedistributableFirmware;

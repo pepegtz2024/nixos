@@ -1,8 +1,8 @@
 { pkgs, ... }: {
-  programs.fish = {
+  programs.zsh = {
     enable = true;
 };
 users.users.pepegtz2024 = {
-shell = pkgs.fish;
+shell = pkgs.zsh;
 };
 }
