@@ -9,13 +9,11 @@ protontricks
 heroic
 ];
 services.flatpak.packages = [
-"io.github.Foldex.AdwSteamGtk"
 "com.yacreader.YACReader"
 "org.telegram.desktop"
 "io.github.celluloid_player.Celluloid"
 "info.febvre.Komikku"
 "com.steamgriddb.SGDBoop"
-"com.vysp3r.ProtonPlus"
 "org.srb2.SRB2"
 "org.kartkrew.RingRacers"
 "org.srb2.SRB2Persona"
@@ -25,5 +23,6 @@ services.flatpak.packages = [
 "io.github.ryubing.Ryujinx"
 "io.github.hedge_dev.hedgemodmanager"
 "com.moulberry.PandoraLauncher"
+"org.libretro.RetroArch"
 ];
 }
