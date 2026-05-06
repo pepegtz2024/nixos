@@ -8,6 +8,7 @@ clamtk
 ];
 services.flatpak.packages = [
 "app.zen_browser.zen"
+"io.github.ungoogled_software.ungoogled_chromium"
 "org.gnome.World.PikaBackup"
 "com.ranfdev.DistroShelf"
 "com.vysp3r.ProtonPlus"
