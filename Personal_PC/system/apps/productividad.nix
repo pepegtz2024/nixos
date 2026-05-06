@@ -9,5 +9,6 @@ services.flatpak.packages = [
 "org.libreoffice.LibreOffice"
 "org.mozilla.Thunderbird"
 "org.audacityteam.Audacity"
+"org.blender.Blender"
 ];
 }
