@@ -19,13 +19,10 @@
 
 		};
 
-	outputs ={ self, nixpkgs, nix-flatpak, lanzaboote, nixos-hardware, ... }:
-	let
-       	system = "x86_64-linux";
-	in  {
+	outputs ={ self, nixpkgs, nix-flatpak, lanzaboote, nixos-hardware, ... }: {
 		nixosConfigurations.Artemisa = nixpkgs.lib.nixosSystem {
-			inherit system;
-			modules = [ ./Personal_PC/configuration.nix
+			system = "x86_64-linux";
+			modules = [ ./Personal_PC/HP-Victus.nix
 			nix-flatpak.nixosModules.nix-flatpak
 			lanzaboote.nixosModules.lanzaboote
 			nixos-hardware.nixosModules.common-cpu-intel

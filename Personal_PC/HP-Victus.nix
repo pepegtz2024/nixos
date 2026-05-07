@@ -12,8 +12,8 @@ in
 {
   imports =
     [ # Include the results of the hardware scan.
-      ./hardware-configuration.nix
-      ./system/saco.nix
+      ./HP-Victus-hardware.nix
+      ./system/HP-Victus-saco.nix
     ];
 
   nixpkgs.config.allowUnfree = true;
@@ -26,6 +26,7 @@ in
 	
   # Configure console keymap
   console.keyMap = "la-latin1";
+
 
  system = {
  inherit stateVersion;
