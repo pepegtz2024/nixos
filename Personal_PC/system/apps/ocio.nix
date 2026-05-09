@@ -7,6 +7,8 @@ adwaita-icon-theme
 mcpelauncher-ui-qt
 protontricks
 heroic
+retroarch-full
+ryubing
 ];
 services.flatpak.packages = [
 "com.yacreader.YACReader"
@@ -20,9 +22,8 @@ services.flatpak.packages = [
 "org.vinegarhq.Sober"
 "net.rpcs3.RPCS3"
 "info.cemu.Cemu"
-"io.github.ryubing.Ryujinx"
 "io.github.hedge_dev.hedgemodmanager"
 "com.moulberry.PandoraLauncher"
-"org.libretro.RetroArch"
+"com.steamgriddb.steam-rom-manager"
 ];
 }

@@ -5,6 +5,8 @@ podman-compose
 gearlever
 git
 clamtk
+ffmpeg-full
+yt-dlp
 ];
 services.flatpak.packages = [
 "app.zen_browser.zen"

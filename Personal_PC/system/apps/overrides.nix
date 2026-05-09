@@ -1,10 +1,4 @@
 {
-  services.flatpak.overrides = {
-    "io.github.ryubing.Ryujinx".Context = {
-      filesystems = [
-        "home/Games"
-      ];
-    };
     "org.vinegarhq.Sober".Context = {
       filesystems = [
         "xdg-run/app/com.discordapp.Discord:create"
@@ -25,6 +19,10 @@
         "home/Documentos/manga"
       ];
     };
-  };
+    "com.steamgriddb.steam-rom-manager".Context = {
+      filesystems = [
+        "home/Games/roms"
+      ];
+    };
 
 }
