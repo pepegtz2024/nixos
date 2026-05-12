@@ -28,14 +28,14 @@ in
 	./system/cups.nix
 	./system/shell.nix
 	#./system/gnome-extensions.nix
-	./firewall.nix
-	./waydroid.nix
-	./lanzaboote.nix
-	./garbage-collector.nix
-	./flatpak.nix
-	./podman.nix
-	./hardware-acceleration.nix
-	./clamav.nix
+	./system/firewall.nix
+	./system/waydroid.nix
+	./system/lanzaboote.nix
+	./system/garbage-collector.nix
+	./system/flatpak.nix
+	./system/podman.nix
+	./system/hardware-acceleration.nix
+	./system/clamav.nix
     ];
 
   nixpkgs.config.allowUnfree = true;
