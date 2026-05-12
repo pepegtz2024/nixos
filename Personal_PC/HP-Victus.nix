@@ -12,8 +12,30 @@ in
 {
   imports =
     [ # Include the results of the hardware scan.
-      ./HP-Victus-hardware.nix
-      ./system/HP-Victus-saco.nix
+    ./HP-Victus-hardware.nix
+    ./system/nvidia.nix
+	./system/apps/productividad.nix
+	./system/apps/ocio.nix
+	./system/apps/utilidad.nix
+	./system/apps/overrides.nix
+	./system/sonido.nix
+	./system/bluetooth.nix
+	./system/bootloader.nix
+	./system/usuario.nix
+	./system/zram.nix
+	./system/escritorio.nix
+	./system/network-manager.nix
+	./system/cups.nix
+	./system/shell.nix
+	#./system/gnome-extensions.nix
+	./firewall.nix
+	./waydroid.nix
+	./lanzaboote.nix
+	./garbage-collector.nix
+	./flatpak.nix
+	./podman.nix
+	./hardware-acceleration.nix
+	./clamav.nix
     ];
 
   nixpkgs.config.allowUnfree = true;
